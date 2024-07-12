@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lafon Mudanças - Especialistas em Mudanças Residenciais e Comerciais</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <a href="#" class="logo">Lafon Mudanças</a>
+      <nav>
+        <button class="hamburger-menu" id="hamburgerMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul id="navMenu">
+          <li><a href="#home">Início</a></li>
+          <li><a href="#services">Serviços</a></li>
+          <li><a href="#quote">Orçamento</a></li>
+          <li><a href="#about">Sobre Nós</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+        <button class="dark-mode-toggle" id="darkModeToggle">
+          <i class="fas fa-moon"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section id="home" class="animate-fadeIn hero">
+        <div class="hero-content">
+          <h1>Mudanças com Confiança e Excelência</h1>
+          <p>A Lafon Mudanças é sua parceira ideal para uma transição suave e segura. Com anos de experiência, nossa equipe altamente treinada garante que cada item seja tratado com o máximo cuidado, do início ao fim da sua mudança.</p>
+          <a href="#quote" class="btn">Solicite um Orçamento</a>
+        </div>
+        <div class="hero-image">
+          <img src="imgs/contratoPhoto.avif" alt="Equipe Lafon Mudanças em ação" width="600" height="400">
+        </div>
+      </section>
+
+      <section class="image-slider animate-fadeIn">
+        <img src="imgs/casaMobiliada.avif" alt="Caminhão de mudança Lafon" class="slider-image active" width="1470" height="980">
+        <img src="imgs/casaMobiliada.avif" alt="Equipe Lafon realizando uma mudança" class="slider-image" width="1470" height="980">
+        <img src="imgs/casaMobiliada.avif" alt="Embalagem profissional Lafon" class="slider-image" width="1471" height="981">
+        <div class="slider-arrow slider-arrow-left">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="slider-arrow slider-arrow-right">
+          <i class="fas fa-chevron-right"></i>
+        </div>
+      </section>
+
+      <section id="services" class="animate-fadeIn">
+        <h2>Nossos Serviços Especializados</h2>
+        <div class="services">
+          <div class="service-item">
+            <i class="fas fa-home"></i>
+            <h3>Mudanças Residenciais</h3>
+            <p>Oferecemos um serviço completo de mudança residencial, cuidando de todos os detalhes para que você possa se concentrar em fazer seu novo espaço se sentir como um lar.</p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-building"></i>
+            <h3>Mudanças Comerciais</h3>
+            <p>Minimizamos o tempo de inatividade do seu negócio com nossa abordagem eficiente e organizada para mudanças de escritórios e instalações comerciais.</p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-box"></i>
+            <h3>Embalagem Profissional</h3>
+            <p>Nossa equipe utiliza técnicas avançadas de embalagem para garantir a máxima proteção dos seus pertences durante o transporte.</p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-truck-loading"></i>
+            <h3>Montagem e Desmontagem</h3>
+            <p>Oferecemos serviços especializados de montagem e desmontagem de móveis, garantindo que tudo seja reinstalado corretamente em seu novo local.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="quote" class="animate-fadeIn">
+        <h2>Solicite seu Orçamento Personalizado</h2>
+        <form action="/submit-quote" method="POST">
+          <input type="text" name="name" placeholder="Seu Nome Completo" required>
+          <input type="email" name="email" placeholder="Seu E-mail" required>
+          <input type="tel" name="phone" placeholder="Seu Telefone" required>
+          <select name="service" required>
+            <option value="">Selecione o Serviço Desejado</option>
+            <option value="residential">Mudança Residencial</option>
+            <option value="commercial">Mudança Comercial</option>
+            <option value="packing">Embalagem Profissional</option>
+            <option value="assembly">Montagem e Desmontagem</option>
+          </select>
+          <textarea name="details" placeholder="Detalhes do serviço (origem, destino, data preferencial, itens especiais, etc.)" rows="4"></textarea>
+          <button type="submit" class="btn">Enviar Solicitação</button>
+        </form>
+      </section>
+
+      <section id="about" class="animate-fadeIn">
+        <h2>A Excelência da Lafon Mudanças</h2>
+        <p>Desde 1985, a Lafon Mudanças tem sido sinônimo de confiabilidade e profissionalismo no setor de mudanças. Nossa história é marcada por um compromisso inabalável com a satisfação do cliente e a inovação constante em nossas práticas.</p>
+        <p>Ao longo dos anos, desenvolvemos metodologias únicas que nos permitem oferecer um serviço personalizado e eficiente. Investimos continuamente em treinamento de pessoal e em equipamentos de última geração para garantir que cada mudança seja realizada com o máximo de cuidado e precisão.</p>
+        <p>Na Lafon, entendemos que cada item tem um valor sentimental além do material. Por isso, tratamos seus pertences como se fossem nossos, garantindo que cheguem ao destino em perfeitas condições. Nossa equipe é composta por profissionais experientes e dedicados, prontos para tornar sua mudança uma experiência tranquila e livre de estresse.</p>
+        <p>Escolher a Lafon Mudanças significa optar por uma parceria de confiança, onde a transparência, a pontualidade e a excelência são os pilares de nosso trabalho. Estamos prontos para fazer parte deste novo capítulo da sua vida, cuidando de cada detalhe da sua mudança com o carinho e a atenção que você merece.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <a href="#" class="footer-logo">Lafon Mudanças</a>
+        <div class="footer-right">
+          <p class="footer-copyright">&copy; 2023 Lafon Mudanças. Todos os direitos reservados.</p>
+          <div class="social-icons">
+            <a href="https://facebook.com/lafonmudancas" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com/lafonmudancas" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com/company/lafonmudancas" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5511999999999" class="float-btn whatsapp-btn" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="#" class="float-btn scroll-top-btn" id="scrollTopBtn">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
