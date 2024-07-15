@@ -188,7 +188,7 @@ h1::after,
 h2::after {
   content: '';
   position: absolute;
-  width: 50%;
+  width: 100%;
   height: 3px;
   bottom: 0;
   left: 0;
@@ -225,6 +225,10 @@ h2::after {
 
 .hero-content {
   flex: 1;
+}
+
+.hero-content a {
+ margin-top: 20px;
 }
 
 .hero-image {
@@ -299,8 +303,8 @@ h2::after {
 /* Services Section */
 .services {
   display: flex;
-  justify-content: space-between;
   gap: 20px;
+  justify-content: center;
   margin-top: 2rem;
   flex-wrap: wrap;
 }
@@ -311,12 +315,18 @@ h2::after {
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-  flex: 1;
-  min-width: 200px;
+  flex: 0;
+  min-width: 260px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+@media (width <= 500px) {
+  .service-item {
+    min-width: 160px;
+  }
 }
 
 .dark-mode .service-item {
@@ -483,19 +493,14 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
+  
+  .hero .btn{
+    text-align: center;
   }
 
-  .hero-image {
-    order: -1;
-    margin-bottom: 2rem;
-  }
-
-  .hero-content,
-  .hero-image {
-    flex: none;
-    width: 100%;
+  .slider-arrow {
+    width: 45px;
+    height: 45px;
   }
 
   .services {
@@ -563,5 +568,32 @@ footer {
 
   .social-icons a {
     margin: 0 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  form{
+    padding: 0rem;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 900px) { 
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-image {
+    order: -1;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .hero-content,
+  .hero-image {
+    flex: none;
+    width: 100%;
   }
 }

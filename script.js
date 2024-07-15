@@ -27,16 +27,6 @@ scrollTopBtn.addEventListener('click', (e) => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Smooth scroll for navigation links
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth',
-    });
-  });
-});
-
 // Image Slider Functionality
 const sliderImages = document.querySelectorAll('.slider-image');
 const leftArrow = document.querySelector('.slider-arrow-left');
@@ -84,5 +74,21 @@ navMenu.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => {
     navMenu.classList.remove('active');
     hamburgerMenu.classList.remove('active');
+  });
+});
+
+const headerHeight = document.querySelector('header').clientHeight;
+console.log(document.querySelector('#home'));
+document.querySelector('main').style.paddingTop = `${64 + headerHeight}px`;
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const linkedElement = document.querySelector(this.getAttribute('href'));
+    window.scrollTo({
+      top: linkedElement.offsetTop - (headerHeight + 20),
+      left: 0,
+      behavior: 'smooth',
+    });
   });
 });
