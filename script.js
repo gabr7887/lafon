@@ -71,7 +71,7 @@ hamburgerMenu.addEventListener('click', () => {
 
 // Close menu when a link is clicked
 navMenu.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
+  link.addEventListener('click', (e) => {
     navMenu.classList.remove('active');
     hamburgerMenu.classList.remove('active');
   });

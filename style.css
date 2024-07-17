@@ -1,10 +1,10 @@
 :root {
-  --primary-color: #4a90e2;
-  --secondary-color: #2c3e50;
+  --primary-color: #F9D101;
+  --secondary-color: #453E27;
   --accent-color: #f39c12;
   --text-color: #333;
   --bg-color: #f9f9f9;
-  --white: #ffffff;
+  --white: #FFFFFA;
   --scroll-top-color: #e74c3c;
   --dark-bg-color: #1a1a1a;
   --dark-text-color: #e0e0e0;
@@ -21,6 +21,10 @@
   --secondary-color: var(--dark-text-color);
   --footer-bg: #1a1a1a;
   --footer-text: #e0e0e0;
+}
+
+.logo{
+  display: flex;
 }
 
 * {
