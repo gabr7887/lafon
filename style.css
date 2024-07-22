@@ -75,12 +75,6 @@ header {
   padding: 0 20px;
 }
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: var(--primary-color);
-  text-decoration: none;
-}
 
 nav {
   display: flex;
@@ -444,12 +438,12 @@ footer {
 }
 
 .whatsapp-btn {
-  bottom: 90px;
+  bottom: 20px;
   background-color: #25d366;
 }
 
 .scroll-top-btn {
-  bottom: 20px;
+  bottom: 90px;
   background-color: #e74c3c;
   display: none;
 }
@@ -474,7 +468,10 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  
+  .logo img{
+    max-height: 42px;
+  }
+
   .hero .btn{
     text-align: center;
   }
@@ -549,6 +546,11 @@ footer {
 
   .social-icons a {
     margin: 0 10px;
+  }
+
+  .float-btn{
+    height: 50px;
+    width: 50px;
   }
 }
 
