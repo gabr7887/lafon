@@ -58,7 +58,7 @@ rightArrow.addEventListener('click', () => {
 setInterval(() => {
   currentImageIndex = (currentImageIndex + 1) % sliderImages.length;
   showImage(currentImageIndex);
-}, 5000);
+}, 8000);
 
 // Hamburger menu functionality
 const hamburgerMenu = document.getElementById('hamburgerMenu');
@@ -78,7 +78,6 @@ navMenu.querySelectorAll('a').forEach((link) => {
 });
 
 const headerHeight = document.querySelector('header').clientHeight;
-console.log(document.querySelector('#home'));
 document.querySelector('main').style.paddingTop = `${64 + headerHeight}px`;
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
