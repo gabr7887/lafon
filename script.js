@@ -64,17 +64,20 @@ setInterval(() => {
 const hamburgerMenu = document.getElementById('hamburgerMenu');
 const navMenu = document.getElementById('navMenu');
 
-hamburgerMenu.addEventListener('click', () => {
+function openMenu() {
   navMenu.classList.toggle('active');
   hamburgerMenu.classList.toggle('active');
-});
+}
 
+function closeMenu() {
+  navMenu.classList.remove('active');
+  hamburgerMenu.classList.remove('active');
+}
+
+hamburgerMenu.addEventListener('click', openMenu);
 // Close menu when a link is clicked
 navMenu.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', (e) => {
-    navMenu.classList.remove('active');
-    hamburgerMenu.classList.remove('active');
-  });
+  link.addEventListener('click', closeMenu);
 });
 
 const headerHeight = document.querySelector('header').clientHeight;
