@@ -131,6 +131,7 @@ nav ul li a::after {
   transition: all 0.3s ease;
 }
 
+
 /* Dark Mode Toggle */
 .dark-mode-toggle {
   background-color: var(--primary-color);
@@ -493,6 +494,10 @@ footer {
     height: 300px;
   }
 
+  .hamburger-menu{
+    display: flex;
+  }
+
   nav ul {
     display: none;
     position: absolute;
@@ -512,10 +517,6 @@ footer {
 
   nav ul li {
     margin: 10px 0;
-  }
-
-  .hamburger-menu {
-    display: flex;
   }
 
   .dark-mode-toggle {

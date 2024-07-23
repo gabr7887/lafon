@@ -64,11 +64,10 @@ rightArrow.addEventListener('click', () => {
   slideTimer = setInterval(rightImage, 5000);
 });
 
-// Auto-rotate images every 5 seconds
-
 // Hamburger menu functionality
 const hamburgerMenu = document.getElementById('hamburgerMenu');
 const navMenu = document.getElementById('navMenu');
+const navContainer = document.getElementById('navContainer');
 
 function openMenu() {
   navMenu.classList.toggle('active');
@@ -80,7 +79,17 @@ function closeMenu() {
   hamburgerMenu.classList.remove('active');
 }
 
+function outsideClick(event) {
+  console.log('teste');
+  console.log(event.target);
+  console.log(this);
+  if (event.target === this) closeMenu();
+}
+
 hamburgerMenu.addEventListener('click', openMenu);
+setTimeout(() => {
+  navContainer.addEventListener('click', outsideClick);
+});
 // Close menu when a link is clicked
 navMenu.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', closeMenu);
