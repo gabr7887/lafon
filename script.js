@@ -43,22 +43,28 @@ function showImage(index) {
   });
 }
 
+function rightImage() {
+  currentImageIndex = (currentImageIndex + 1) % sliderImages.length;
+  showImage(currentImageIndex);
+}
+
+let slideTimer = setInterval(rightImage, 5000);
+
 leftArrow.addEventListener('click', () => {
   currentImageIndex =
     (currentImageIndex - 1 + sliderImages.length) % sliderImages.length;
   showImage(currentImageIndex);
+  clearInterval(slideTimer);
+  slideTimer = setInterval(rightImage, 5000);
 });
 
 rightArrow.addEventListener('click', () => {
-  currentImageIndex = (currentImageIndex + 1) % sliderImages.length;
-  showImage(currentImageIndex);
+  rightImage();
+  clearInterval(slideTimer);
+  slideTimer = setInterval(rightImage, 5000);
 });
 
 // Auto-rotate images every 5 seconds
-setInterval(() => {
-  currentImageIndex = (currentImageIndex + 1) % sliderImages.length;
-  showImage(currentImageIndex);
-}, 8000);
 
 // Hamburger menu functionality
 const hamburgerMenu = document.getElementById('hamburgerMenu');
