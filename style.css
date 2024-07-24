@@ -553,6 +553,10 @@ footer {
     height: 50px;
     width: 50px;
   }
+
+  .scroll-top-btn{
+    bottom: 80px;
+  }
 }
 
 

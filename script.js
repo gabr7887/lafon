@@ -109,3 +109,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
   });
 });
+
+//Form
+const form = document.forms[0];
+console.log(form);

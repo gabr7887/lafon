@@ -92,10 +92,14 @@
       <section id="quote" class="animate-fadeIn">
         <h2>Solicite seu Orçamento Personalizado</h2>
         <form action="/submit-quote" method="POST">
-          <input type="text" name="name" placeholder="Seu Nome Completo" required>
-          <input type="email" name="email" placeholder="Seu E-mail" required>
-          <input type="tel" name="phone" placeholder="Seu Telefone" required>
-          <select name="service" required>
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="fullName" placeholder="Seu Nome Completo" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+          <label for="phone">Telefone</label>
+          <input type="tel" name="phone" id="phone" placeholder="Seu Telefone (99) 99999-9999" required>
+          <label for="service">Tipo de Serviço</label>
+          <select id="service" name="service" required>
             <option value="">Selecione o Serviço Desejado</option>
             <option value="residential">Mudança Residencial</option>
             <option value="commercial">Mudança Comercial</option>
@@ -103,7 +107,8 @@
             <option value="assembly">Montagem e Desmontagem</option>
             <option value="frete">Montagem e Desmontagem</option>
           </select>
-          <textarea name="details" placeholder="Detalhes do serviço (origem, destino, data preferencial, itens especiais, etc.)" rows="4"></textarea>
+          <label for="Detalhes">Detalhes</label>
+          <textarea name="details" id="detalhes" placeholder="Detalhes do serviço (origem, destino, data preferencial, itens especiais, etc.)" rows="4"></textarea>
           <button type="submit" class="btn">Enviar Solicitação</button>
         </form>
       </section>
