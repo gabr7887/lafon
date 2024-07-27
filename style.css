@@ -635,10 +635,6 @@ label{
   z-index: 100;
 } */
 
-form,  form textarea{
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.6;
-}
 
 form div{
   display: grid;
@@ -647,7 +643,7 @@ form div{
 
 form{
   display: grid;
-  gap: 20px;
+  gap: 8px;
 }
 
 form input,
@@ -657,27 +653,44 @@ form select{
   padding: .8rem;
   border: 1px solid #333;
   border-radius: 5px;
+  color: var(--text-color);
 }
 
-.dark-mode input{
+label, form input,
+form textarea,
+form select, .error {
+  font-size: 1.125rem;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+}
+
+.dark-mode input, .dark-mode #service, .dark-mode #detalhes{
   border: 1px solid #ddd;
 }
 
 form button{
   max-width: fit-content;
+  font-size: 1.125rem;
 }
 
-.errorState input {
+.errorState input, .errorState #detalhes, .errorState #service {
   border-color: #e74c3c;
 }
 
+
+form input:focus,
+#detalhes:focus,
+#service:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+
 .error{
+  visibility: hidden;
   color: #e74c3c;
 }
 
-form input:focus,
-form textarea:focus,
-form select:focus {
-  outline: none;
-  border-color: var(--primary-color);
+.errorState .error{
+  display: block;
 }
