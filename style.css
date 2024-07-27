@@ -344,38 +344,14 @@ form {
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
 }
 
 .dark-mode form {
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
 }
 
-form input,
-form textarea,
-form select {
-  width: 100%;
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-  background-color: var(--white);
-  color: var(--text-color);
-}
-
-form input:focus,
-form textarea:focus,
-form select:focus {
-  outline: none;
-  border-color: var(--primary-color);
-}
-
-/* Updated textarea style */
-form textarea {
-  resize: none;
-  height: 150px;
-  /* Fixed height */
-}
 
 /* Footer Styles */
 footer {
@@ -618,4 +594,90 @@ footer {
   .scroll-top-btn:hover {
   transform: scale(1.1);
   }
+}
+
+
+/* form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--white);
+  color: var(--text-color);
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+
+form textarea {
+  resize: none;
+  height: 150px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  
+}
+
+label{
+  display: block;
+}
+
+.error{
+  position: absolute;
+  z-index: 100;
+} */
+
+form,  form textarea{
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+}
+
+form div{
+  display: grid;
+  gap:4px;
+}
+
+form{
+  display: grid;
+  gap: 20px;
+}
+
+form input,
+form textarea,
+form select{
+  background-color: var(--white);
+  padding: .8rem;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.dark-mode input{
+  border: 1px solid #ddd;
+}
+
+form button{
+  max-width: fit-content;
+}
+
+.errorState input {
+  border-color: #e74c3c;
+}
+
+.error{
+  color: #e74c3c;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  outline: none;
+  border-color: var(--primary-color);
 }
