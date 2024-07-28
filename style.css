@@ -343,14 +343,57 @@ form {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.6;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+form div{
+  display: grid;
+  margin-bottom: 0.5rem;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--white);
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus{
+  outline: none;
+  border-color: var(--primary-color);
 }
 
 .dark-mode form {
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
 }
+
+.formFont{
+  color: var(--text-color);
+  font-size: 1.125rem;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+}
+
+.error{
+  visibility: hidden;
+  color: #e74c3c;
+  font-size: 1rem;
+}
+
+.errorState .error{
+  visibility: visible;
+}
+
+.errorState input, .errorState #detalhes, .errorState #service {
+  border-color: #e74c3c;
+}
+
 
 
 /* Footer Styles */
@@ -537,9 +580,16 @@ footer {
 
 
 @media (max-width: 500px) {
-  form{
-    padding: 0rem;
+  .dark-mode form{
+    padding: 0;
     box-shadow: none;
+  }
+
+  #quote {
+  padding: 2rem 1rem;
+  }
+  .dark-mode form {
+    box-shadow:none;
   }
 }
 
@@ -594,103 +644,4 @@ footer {
   .scroll-top-btn:hover {
   transform: scale(1.1);
   }
-}
-
-
-/* form input,
-form textarea,
-form select {
-  width: 100%;
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-  background-color: var(--white);
-  color: var(--text-color);
-}
-
-form input:focus,
-form textarea:focus,
-form select:focus {
-  outline: none;
-  border-color: var(--primary-color);
-}
-
-
-form textarea {
-  resize: none;
-  height: 150px;
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.6;
-  
-}
-
-label{
-  display: block;
-}
-
-.error{
-  position: absolute;
-  z-index: 100;
-} */
-
-
-form div{
-  display: grid;
-  gap:4px;
-}
-
-form{
-  display: grid;
-  gap: 8px;
-}
-
-form input,
-form textarea,
-form select{
-  background-color: var(--white);
-  padding: .8rem;
-  border: 1px solid #333;
-  border-radius: 5px;
-  color: var(--text-color);
-}
-
-label, form input,
-form textarea,
-form select, .error {
-  font-size: 1.125rem;
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.6;
-}
-
-.dark-mode input, .dark-mode #service, .dark-mode #detalhes{
-  border: 1px solid #ddd;
-}
-
-form button{
-  max-width: fit-content;
-  font-size: 1.125rem;
-}
-
-.errorState input, .errorState #detalhes, .errorState #service {
-  border-color: #e74c3c;
-}
-
-
-form input:focus,
-#detalhes:focus,
-#service:focus {
-  outline: none;
-  border-color: var(--primary-color);
-}
-
-
-.error{
-  visibility: hidden;
-  color: #e74c3c;
-}
-
-.errorState .error{
-  display: block;
 }

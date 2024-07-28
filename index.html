@@ -117,23 +117,23 @@
         </form> -->
         <form>
           <div>
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" placeholder="Seu Nome Completo" required>
-            <span class="error">O deve ser preenchido</span>
+            <label class="formFont" for="nome">Nome</label>
+            <input class="formFont" type="text" id="nome" placeholder="Seu Nome Completo" required>
+            <span class="error formFont">Preencha o nome</span>
           </div>
           <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Seu E-mail" required>
-            <span class="error">O email deve ser preenchido</span>
+            <label class="formFont" for="email">Email</label>
+            <input class="formFont" type="email" id="email" placeholder="Seu E-mail" required>
+            <span class="error formFont">Preencha o email</span>
           </div>
           <div>
-            <label for="telefone">Telefone</label>
-            <input type="tel" id="telefone" placeholder="Seu Telefone (99) 99999-9999" required>
-            <span class="error">O telefone deve ser preenchido</span>
+            <label class="formFont" for="telefone">Telefone</label>
+            <input class="formFont" type="tel" id="telefone" placeholder="Seu Telefone (99) 99999-9999" required>
+            <span class="error formFont">Preencha o telefone</span>
           </div>
           <div>
-            <label for="service">Tipo de Serviço</label>
-            <select id="service" name="service" required>
+            <label class="formFont" for="service">Tipo de Serviço</label>
+            <select class="formFont" id="service" name="service" required>
               <option value="">Selecione o Serviço Desejado</option>
               <option value="residencial">Mudança Residencial</option>
               <option value="comercial">Mudança Comercial</option>
@@ -141,17 +141,15 @@
               <option value="montagem">Montagem e Desmontagem</option>
               <option value="frete">Montagem e Desmontagem</option>
             </select>
-            <span class="error">Você deve selecionar o tipo de serviço</span>
+            <span class="error formFont">Selecione o serviço</span>
           </div>
           <div>
-            <label for="Detalhes">Detalhes</label>
-            <textarea name="details" id="detalhes" placeholder="Detalhes do serviço (origem, destino, data preferencial, itens especiais, etc.)" rows="4"></textarea>
-            <span class="error">Por favor forneça detalhes</span>
+            <label class="formFont" for="Detalhes">Detalhes</label>
+            <textarea class="formFont" name="details" id="detalhes" placeholder="Detalhes do serviço (origem, destino, data preferencial, itens especiais, etc.)" rows="4"></textarea>
+            <span class="error formFont">Por favor forneça detalhes</span>
           </div>
           <button type="submit" class="btn">Enviar Solicitação</button>
         </form>
-
-
       </section>
 
       <section id="about" class="animate-fadeIn">
