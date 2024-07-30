@@ -39,6 +39,7 @@ body {
   color: var(--text-color);
   background-color: var(--bg-color);
   transition: background-color 0.3s ease, color 0.3s ease;
+  text-size-adjust: none;
 }
 
 .container {
@@ -344,6 +345,12 @@ form {
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+  display: flex;
+  flex-direction: column;
+}
+
+form button{
+  max-width: fit-content;
 }
 
 form div{
@@ -375,7 +382,7 @@ form select:focus{
 
 .formFont{
   color: var(--text-color);
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
 }
@@ -469,6 +476,7 @@ footer {
 }
 
 
+
 /* Animations */
 @keyframes fadeIn {
   from {
@@ -516,6 +524,7 @@ footer {
   .hamburger-menu{
     display: flex;
   }
+
 
   nav ul {
     display: none;
@@ -585,12 +594,19 @@ footer {
     box-shadow: none;
   }
 
+  form{
+    padding: 0;
+    box-shadow: none;
+  }
+
+  form button{
+    align-self: center;
+  }
+
   #quote {
   padding: 2rem 1rem;
   }
-  .dark-mode form {
-    box-shadow:none;
-  }
+
 }
 
 @media (max-width: 900px) { 
