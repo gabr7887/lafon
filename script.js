@@ -67,7 +67,6 @@ rightArrow.addEventListener('click', () => {
 // Hamburger menu functionality
 const hamburgerMenu = document.getElementById('hamburgerMenu');
 const navMenu = document.getElementById('navMenu');
-const navContainer = document.getElementById('navContainer');
 
 function openMenu() {
   navMenu.classList.toggle('active');
@@ -79,17 +78,8 @@ function closeMenu() {
   hamburgerMenu.classList.remove('active');
 }
 
-function outsideClick(event) {
-  console.log('teste');
-  console.log(event.target);
-  console.log(this);
-  if (event.target === this) closeMenu();
-}
-
 hamburgerMenu.addEventListener('click', openMenu);
-setTimeout(() => {
-  navContainer.addEventListener('click', outsideClick);
-});
+
 // Close menu when a link is clicked
 navMenu.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', closeMenu);
@@ -111,5 +101,11 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 //Form
-const form = document.forms[0];
-console.log(form);
+const contato = document.forms[0];
+function handleOnChange(event) {
+  if (!event.target.checkValidity() && event.target.value) {
+    event.target.parentNode.classList.toggle('errorState');
+  }
+  console.log(`${event.target.name}: ${event.target.value}`);
+}
+contato.addEventListener('change', handleOnChange);

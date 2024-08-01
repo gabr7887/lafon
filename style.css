@@ -418,6 +418,10 @@ form select:focus{
   font-size: 1rem;
 }
 
+.errorState label{
+  color: #e74c3c;
+}
+
 .errorState .error{
   visibility: visible;
 }
@@ -447,6 +451,14 @@ footer {
   font-weight: bold;
   color: var(--primary-color);
   text-decoration: none;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+@media (width < 928px) {
+  .footer-logo {
+    margin: none;
+  }
 }
 
 .footer-right {
@@ -456,6 +468,7 @@ footer {
 
 .footer-copyright {
   margin-right: 20px;
+  text-align: center;
 }
 
 .social-icons {
@@ -522,7 +535,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
   .logo img{
-    max-height: 42px;
+    max-height: 40px;
   }
 
   .hero .btn{
@@ -630,6 +643,10 @@ footer {
 
   #quote {
   padding: 2rem 1rem;
+  }
+
+  #quote h2, #quote .btn{
+    margin: 1rem;
   }
 
 }
