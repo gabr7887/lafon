@@ -27,6 +27,11 @@
   display: flex;
 }
 
+.btn:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -430,6 +435,9 @@ form select:focus{
   border-color: #e74c3c;
 }
 
+form div:focus-within label{
+  color: var(--primary-color);
+}
 
 
 /* Footer Styles */
@@ -678,11 +686,6 @@ footer {
 
   .dark-mode-toggle:hover {
     background-color: var(--secondary-color);
-  }
-
-  .btn:hover {
-    background-color: transparent;
-    color: var(--primary-color);
   }
 
   .slider-arrow:hover {

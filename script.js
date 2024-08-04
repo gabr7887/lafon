@@ -102,10 +102,27 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 //Form
 const contato = document.forms[0];
-function handleOnChange(event) {
-  if (!event.target.checkValidity() && event.target.value) {
-    event.target.parentNode.classList.toggle('errorState');
+
+const email = contato.querySelector('#email');
+function validarEmail(event) {
+  const regex =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+  if (!regex.test(event.target.value)) {
+    event.target.parentNode.classList.add('errorState');
+  } else {
+    event.target.parentNode.classList.remove('errorState');
   }
-  console.log(`${event.target.name}: ${event.target.value}`);
 }
-contato.addEventListener('change', handleOnChange);
+email.addEventListener('change', validarEmail);
+
+const telefone = contato.querySelector('#telefone');
+function validarTelefone(event) {
+  const regex =
+    /^\(?(?:[14689][1-9]|2[12478]|3[1234578]|5[1345]|7[134579])\)? ?(?:[2-8]|9[0-9])[0-9]{3}\-?[0-9]{4}$/;
+  if (!regex.test(event.target.value)) {
+    event.target.parentNode.classList.add('errorState');
+  } else {
+    event.target.parentNode.classList.remove('errorState');
+  }
+}
+telefone.addEventListener('change', validarTelefone);
