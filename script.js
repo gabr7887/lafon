@@ -139,15 +139,18 @@ function validarInputs(event) {
 inputs.forEach((input) => input.addEventListener('change', validarInputs));
 
 //api
-
+const responseDiv = document.querySelector('.response-container');
+console.log(responseDiv);
 function enviarForm(event) {
   event.preventDefault();
   emailjs.sendForm('service_f8h46t5', 'template_c217ed9', contato).then(
-    (response) => {
-      console.log('SUCCESS!', response.status, response.text);
+    () => {
+      responseDiv.classList.add('active');
+      responseDiv.children[0].innerText = `Solicitação enviada, Por favor aguarde nosso contato`;
     },
-    (error) => {
-      console.log('FAILED...', error);
+    () => {
+      responseDiv.classList.add('activeError');
+      responseDiv.children[0].innerText = `Um erro, Por favor reenvie o formulario`;
     },
   );
 }

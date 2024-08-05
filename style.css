@@ -207,6 +207,7 @@ h2 {
   position: relative;
   display: inline-block;
   padding-bottom: 10px;
+  font-size: 1.5rem;
 }
 
 h1::after,
@@ -462,6 +463,34 @@ footer {
   cursor: pointer;
   margin-right: 2rem;
 }
+
+
+.response-container {
+  display: none;
+  position: fixed;
+  top: 0px;
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+.response-container.active {
+  display: flex;
+  background-color: #25d366;
+}
+
+.response-container.activeError {
+  display: flex;
+  background-color: #e74c3c;
+}
+
+.response {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+}
+
 
 @media (width < 928px) {
   .footer-logo {
