@@ -128,8 +128,6 @@ function validarTelefone(event) {
 telefone.addEventListener('change', validarTelefone);
 
 const inputs = contato.querySelectorAll('[data-inputs]');
-console.log(inputs);
-console.log(contato);
 function validarInputs(event) {
   if (!event.target.value.length) {
     event.target.parentNode.classList.add('errorState');
@@ -139,3 +137,19 @@ function validarInputs(event) {
 }
 
 inputs.forEach((input) => input.addEventListener('change', validarInputs));
+
+//api
+
+function enviarForm(event) {
+  event.preventDefault();
+  emailjs.sendForm('service_f8h46t5', 'template_c217ed9', contato).then(
+    (response) => {
+      console.log('SUCCESS!', response.status, response.text);
+    },
+    (error) => {
+      console.log('FAILED...', error);
+    },
+  );
+}
+
+contato.addEventListener('submit', enviarForm);

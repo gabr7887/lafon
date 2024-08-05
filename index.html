@@ -8,6 +8,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "zoK1uXktkycuy5G_c",
+      });
+    })();
+  </script>
 </head>
 
 <body class="dark-mode">
@@ -94,7 +103,7 @@
         <form>
           <div>
             <label class="formFont" for="nome">Nome</label>
-            <input class="formFont" type="text" name="nome" id="nome" data-inputs placeholder="Seu Nome Completo" required>
+            <input class="formFont" type="text" name="name" id="nome" data-inputs placeholder="Seu Nome Completo" required>
             <span class="error formFont">Preencha o nome</span>
           </div>
           <div>
@@ -104,12 +113,12 @@
           </div>
           <div>
             <label class="formFont" for="telefone">Telefone</label>
-            <input class="formFont" type="tel" name="telefone" id="telefone" placeholder="(00) 00000-0000" required>
+            <input class="formFont" type="tel" name="tel" id="telefone" placeholder="(00) 00000-0000" required>
             <span class="error formFont">Preencha o telefone</span>
           </div>
           <div>
             <label class="formFont" for="service">Tipo de Serviço</label>
-            <select class="formFont" id="service" data-inputs name="service" required>
+            <select class="formFont" id="service" data-inputs name="type" required>
               <option value="">Selecione o Serviço</option>
               <option value="residencial">Mudança Residencial</option>
               <option value="comercial">Mudança Comercial</option>
@@ -121,7 +130,7 @@
           </div>
           <div>
             <label class="formFont" for="Detalhes">Detalhes</label>
-            <textarea class="formFont" name="detalhes" id="detalhes" data-inputs placeholder="Detalhes do serviço (origem, destino, data preferencial, itens especiais, etc.)" rows="4"></textarea>
+            <textarea class="formFont" name="message" id="detalhes" data-inputs placeholder="Detalhes do serviço (origem, destino, data preferencial, itens especiais, etc.)" rows="4"></textarea>
             <span class="error formFont">Por favor forneça detalhes</span>
           </div>
           <button type="submit" class="btn">Enviar Solicitação</button>
