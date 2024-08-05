@@ -20,13 +20,13 @@
           <span></span>
           <span></span>
         </button>
-        <ul id="navMenu">
+        <ul id="navMenu" aria-label="menu">
           <li><a href="#home">Início</a></li>
           <li><a href="#services">Serviços</a></li>
           <li><a href="#quote">Orçamento</a></li>
           <li><a href="#about">Sobre Nós</a></li>
         </ul>
-        <button class="dark-mode-toggle" id="darkModeToggle">
+        <button class="dark-mode-toggle" id="darkModeToggle" aria-label="botão modo claro e escuro">
           <i class="fas fa-sun"></i>
         </button>
       </nav>
@@ -36,11 +36,11 @@
   <main>
     <div class="container">
       <section id="home" class="animate-fadeIn hero">
-        <div class="hero-content">
+        <article class="hero-content" aria-label="introdução">
           <h1>Mudanças com Confiança e Excelência</h1>
           <p>A Lafon Mudanças é sua parceira ideal para uma transição suave e segura. Com anos de experiência, nossa equipe altamente treinada garante que cada item seja tratado com o máximo cuidado, do início ao fim da sua mudança.</p>
           <a href="#quote" class="btn">Solicite um Orçamento</a>
-        </div>
+        </article>
         <div class="hero-image">
           <img src="imgs/mudancainterna.jpg" alt="Equipe Lafon Mudanças em ação" width="600" height="400">
         </div>
@@ -60,41 +60,41 @@
 
       <section id="services" class="animate-fadeIn">
         <h2>Nossos Serviços Especializados</h2>
-        <div class="services">
-          <div class="service-item">
+        <div class="services" aria-label="Nossos serviços">
+          <article class="service-item">
             <i class="fas fa-home"></i>
             <h3>Mudanças Residenciais</h3>
             <p>Oferecemos um serviço completo de mudança residencial, cuidando de todos os detalhes para que você possa se concentrar em fazer seu novo espaço se sentir como um lar.</p>
-          </div>
-          <div class="service-item">
+          </article>
+          <article class="service-item">
             <i class="fas fa-building"></i>
             <h3>Mudanças Comerciais</h3>
             <p>Minimizamos o tempo de inatividade do seu negócio com nossa abordagem eficiente e organizada para mudanças de escritórios e instalações comerciais.</p>
-          </div>
-          <div class="service-item">
+          </article>
+          <article class="service-item">
             <i class="fas fa-box"></i>
             <h3>Embalagem Profissional</h3>
             <p>Nossa equipe utiliza técnicas avançadas de embalagem para garantir a máxima proteção dos seus pertences durante o transporte.</p>
-          </div>
-          <div class="service-item">
+          </article>
+          <article class="service-item">
             <i class="fas fa-truck-loading"></i>
             <h3>Montagem e Desmontagem</h3>
             <p>Oferecemos serviços especializados de montagem e desmontagem de móveis, garantindo que tudo seja reinstalado corretamente em seu novo local.</p>
-          </div>
-          <div class="service-item">
+          </article>
+          <article class="service-item">
             <i class="fa-solid fa-truck"></i>
             <h3>Entregas Em Todo País</h3>
             <p>Realizamos entregas em todo o Brasil, oferecendo serviços confiáveis e eficientes. Se você precisa enviar pacotes, encomendas ou cargas, conte conosco para uma entrega segura e pontual.</p>
-          </div>
-        </div>
+          </article>
+          </article>
       </section>
 
-      <section id="quote" class="animate-fadeIn">
+      <section id="quote" class="animate-fadeIn" aria-label="formulário para Solicitação de orçamento">
         <h2>Solicite seu Orçamento Personalizado</h2>
         <form>
           <div>
             <label class="formFont" for="nome">Nome</label>
-            <input class="formFont" type="text" name="nome" id="nome" placeholder="Seu Nome Completo" required>
+            <input class="formFont" type="text" name="nome" id="nome" data-inputs placeholder="Seu Nome Completo" required>
             <span class="error formFont">Preencha o nome</span>
           </div>
           <div>
@@ -109,7 +109,7 @@
           </div>
           <div>
             <label class="formFont" for="service">Tipo de Serviço</label>
-            <select class="formFont" id="service" name="service" required>
+            <select class="formFont" id="service" data-inputs name="service" required>
               <option value="">Selecione o Serviço</option>
               <option value="residencial">Mudança Residencial</option>
               <option value="comercial">Mudança Comercial</option>
@@ -121,14 +121,14 @@
           </div>
           <div>
             <label class="formFont" for="Detalhes">Detalhes</label>
-            <textarea class="formFont" name="detalhes" id="detalhes" placeholder="Detalhes do serviço (origem, destino, data preferencial, itens especiais, etc.)" rows="4"></textarea>
+            <textarea class="formFont" name="detalhes" id="detalhes" data-inputs placeholder="Detalhes do serviço (origem, destino, data preferencial, itens especiais, etc.)" rows="4"></textarea>
             <span class="error formFont">Por favor forneça detalhes</span>
           </div>
           <button type="submit" class="btn">Enviar Solicitação</button>
         </form>
       </section>
 
-      <section id="about" class="animate-fadeIn">
+      <section id="about" class="animate-fadeIn" aria-label="sobre nós">
         <h2>A Excelência da Lafon Mudanças</h2>
         <p>Meu pai começou sua carreira em uma empresa de mudanças, onde ganhou o apelido “Lafon das Mudanças”. Ele decidiu abrir sua própria empresa e, inicialmente, realizava pequenas mudanças com um veículo Saveiro. Com o tempo, expandiu a capacidade de atendimento ao adquirir um caminhão.</p>
         <p>Hoje, após 12 anos no mercado, nossa empresa é uma referência no setor, oferecendo serviços de mudanças residenciais e comerciais com foco na segurança e integridade dos bens transportados. A dedicação e o compromisso com a excelência nos levaram a investir continuamente em treinamento e tecnologia, garantindo que cada mudança seja realizada com a máxima eficiência e cuidado.</p>
@@ -160,12 +160,13 @@
     </div>
   </footer>
 
-  <a href="https://wa.me/5511999999999" class="float-btn whatsapp-btn" target="_blank" rel="noopener noreferrer">
+  <a href="https://wa.me/5511999999999" class="float-btn whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="whatsapp">
     <i class="fab fa-whatsapp"></i>
   </a>
   <a href="#" class="float-btn scroll-top-btn" id="scrollTopBtn">
     <i class="fas fa-chevron-up"></i>
   </a>
+
 
   <script src="script.js"></script>
 </body>

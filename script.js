@@ -126,3 +126,16 @@ function validarTelefone(event) {
   }
 }
 telefone.addEventListener('change', validarTelefone);
+
+const inputs = contato.querySelectorAll('[data-inputs]');
+console.log(inputs);
+console.log(contato);
+function validarInputs(event) {
+  if (!event.target.value.length) {
+    event.target.parentNode.classList.add('errorState');
+  } else {
+    event.target.parentNode.classList.remove('errorState');
+  }
+}
+
+inputs.forEach((input) => input.addEventListener('change', validarInputs));
