@@ -473,6 +473,7 @@ footer {
   align-items: center;
   justify-content: center;
   width: 100vw;
+  height: 90px;
 }
 
 .response-container.active {
@@ -487,9 +488,11 @@ footer {
 
 .response {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   color: #1a1a1a;
 }
+
+
 
 
 @media (width < 928px) {

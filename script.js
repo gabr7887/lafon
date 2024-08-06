@@ -146,11 +146,17 @@ function enviarForm(event) {
   emailjs.sendForm('service_f8h46t5', 'template_c217ed9', contato).then(
     () => {
       responseDiv.classList.add('active');
-      responseDiv.children[0].innerText = `Solicitação enviada, Por favor aguarde nosso contato`;
+      responseDiv.children[0].innerText = `Solicitação enviada, Por favor aguarde nosso contato.`;
+      setTimeout(() => {
+        window.location.reload();
+      }, 3500);
     },
     () => {
       responseDiv.classList.add('activeError');
-      responseDiv.children[0].innerText = `Um erro, Por favor reenvie o formulario`;
+      responseDiv.children[0].innerText = `Um erro ocorreu, Por favor reenvie o formulario.`;
+      setTimeout(() => {
+        window.location.reload();
+      }, 3500);
     },
   );
 }
