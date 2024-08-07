@@ -641,11 +641,10 @@ footer {
 
   .footer-content {
     flex-direction: column;
-    text-align: center;
   }
 
   .footer-logo {
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 0;
   }
 
   .footer-right {

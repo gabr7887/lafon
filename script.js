@@ -140,7 +140,6 @@ inputs.forEach((input) => input.addEventListener('change', validarInputs));
 
 //api
 const responseDiv = document.querySelector('.response-container');
-console.log(responseDiv);
 function enviarForm(event) {
   event.preventDefault();
   emailjs.sendForm('service_f8h46t5', 'template_c217ed9', contato).then(
