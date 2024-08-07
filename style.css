@@ -473,17 +473,21 @@ footer {
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 90px;
+  height: 60px;
+  animation: test 0.3s;
 }
 
 .response-container.active {
   display: flex;
   background-color: #25d366;
+  animation: showResponse 0.3s;
 }
 
 .response-container.activeError {
   display: flex;
   background-color: #e74c3c;
+  animation: showResponse 0.3s;
+
 }
 
 .response {
@@ -492,8 +496,14 @@ footer {
   color: #1a1a1a;
 }
 
-
-
+@keyframes showResponse {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 @media (width < 928px) {
   .footer-logo {
@@ -686,7 +696,7 @@ footer {
   }
 
   #quote h2, #quote .btn{
-    margin: 1rem;
+    margin: 0rem 1rem 1rem 1rem;
   }
 
 }
