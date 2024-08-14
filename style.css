@@ -681,6 +681,7 @@ footer {
     box-shadow: none;
   }
 
+
   form{
     padding: 0;
     box-shadow: none;
@@ -717,6 +718,12 @@ footer {
   .hero-image {
     flex: none;
     width: 100%;
+  }
+}
+
+@media (max-width: 500px){
+  .hero-image{
+    margin-bottom: 0.5rem;
   }
 }
 
