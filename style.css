@@ -455,6 +455,10 @@ footer {
   align-items: center;
 }
 
+.footer-right h2{
+  margin-bottom: 12px;
+}
+
 .footer-logo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -472,10 +476,12 @@ footer {
   z-index: 2000;
   align-items: center;
   justify-content: center;
+  text-align: center;
   width: 100vw;
   height: 60px;
   animation: test 0.3s;
 }
+
 
 .response-container.active {
   display: flex;
@@ -494,6 +500,7 @@ footer {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.125rem;
   color: #1a1a1a;
+  text-align: center;
 }
 
 @keyframes showResponse {
@@ -514,7 +521,11 @@ footer {
 .footer-right {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
+
+
 
 .footer-copyright {
   margin-right: 20px;
@@ -523,12 +534,12 @@ footer {
 
 .social-icons {
   display: flex;
+  gap: 15px;
 }
 
 .social-icons a {
   color: var(--footer-text);
   font-size: 1.5rem;
-  margin-left: 15px;
   transition: color 0.3s ease;
 }
 
