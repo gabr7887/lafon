@@ -142,7 +142,7 @@ inputs.forEach((input) => input.addEventListener('change', validarInputs));
 const responseDiv = document.querySelector('.response-container');
 function enviarForm(event) {
   event.preventDefault();
-  emailjs.sendForm('service_ws2z79z', '', contato).then(
+  emailjs.sendForm('service_ws2z79z', 'template_80e8pzc', contato).then(
     () => {
       responseDiv.classList.add('active');
       responseDiv.children[0].innerText = `Solicitação enviada, Por favor aguarde nosso contato.`;
